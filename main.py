@@ -6,15 +6,17 @@ from remove import remover_curso
 from list import listar_cursos
 
 while True:
+    print(
+        "\n---Menu de cursos---\n"
+        "1 - Adicionar curso\n"
+        "2 - Pesquisar curso\n"
+        "3 - Editar curso\n"
+        "4 - Remover curso\n"
+        "5 - Listar todos os cursos\n"
+        "6 - Sair → encerrar o programa\n"
+    )
     try:
-        opcao_curso = int(input("1 - Adicionar curso\n"          
-                            "2 - Pesquisar curso\n"       
-                            "3 - Editar curso\n"         
-                            "4 - Remover curso\n"         
-                            "5 - Listar todos os cursos\n"
-                            "6 - Sair → encerrar o programa\n"
-                            "Escolha uma opção: "
-                            ))
+        opcao_curso = int(input("Escolha uma opção: "))
     except ValueError:
         print("Somente números")
         continue
@@ -25,20 +27,21 @@ while True:
         carga = input("Digite a carga do curso novo: ")
         adicionar_curso(nome, descricao, carga)
     elif opcao_curso == 2:
-       pesquisar_curso()
+        pesquisar_curso()
     elif opcao_curso == 3:
-       atualizar_curso()
+        atualizar_curso()
     elif opcao_curso == 4:
-       try:
-        id_curso = int(input("Digite o ID do curso que deseja remover: "))
-        remover_curso(id_curso)
-       except ValueError:
-        print("ID inválido! Digite apenas números.")
+        try:
+            id_curso = int(input("Digite o ID do curso que deseja remover: "))
+            remover_curso(id_curso)
+        except ValueError:
+            print("ID inválido! Digite apenas números.")
     elif opcao_curso == 5:
-       listar_cursos()
+        listar_cursos()
     elif opcao_curso == 6:
-       print("Programa encerrando...")
-       break
+        print("Programa encerrando...")
+        break
     else:
-       print("Opção inválida. Tente novamente")
+        print("Opção inválida. Tente novamente")
+
 

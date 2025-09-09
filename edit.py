@@ -1,5 +1,4 @@
 #Função de editar items
-# Lista de cursos
 from database import cursos
 
 def atualizar_curso():
@@ -23,10 +22,10 @@ def atualizar_curso():
             curso["carga"] = nova_carga
 
             print("\n✅ Curso atualizado com sucesso!")
-            print(curso)
             return
     
     print("Curso não encontrado!")
 
 if __name__ == "__main__":
-    atualizar_curso(2)
+    atualizar_curso()
+

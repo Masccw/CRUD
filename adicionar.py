@@ -2,7 +2,6 @@
 from database import cursos
 
 def adicionar_curso(nome, descricao, carga):
-    global cursos
     novo_id = cursos[-1]["id"] + 1 if cursos else 1  
     novo_curso = {
         "id": novo_id,

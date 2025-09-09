@@ -9,9 +9,10 @@ def pesquisar_curso():
     else:
         print("\nCursos encontrados:")
         for c in encontrados:
-            print(f"ID: {c['id']} | Nome: {c['nome']} | Carga Horária: {c['carga']}")
+            print(f"ID: {c['id']} | Nome: {c['nome']}| Descrição: {c['descrição']} | Carga Horária: {c['carga']}")
 
 if __name__ == "__main__":
-    pesquisar_curso("Python")
+    pesquisar_curso()
+
 
 
