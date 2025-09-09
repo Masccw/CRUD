@@ -2,7 +2,6 @@
 from database import cursos
 
 def remover_curso(id_curso):
-    global cursos
     for i, curso in enumerate(cursos):
         if curso["id"] == id_curso:
             curso_removido = cursos.pop(i)
@@ -10,3 +9,9 @@ def remover_curso(id_curso):
             return
     print(f"Curso com ID {id_curso} não encontrado.")
 
+if __name__ == "__main__":
+    try:
+        id_curso = int(input("Digite o ID do curso que deseja remover: "))
+        remover_curso(id_curso)
+    except ValueError:
+        print("ID inválido! Digite apenas números.")
