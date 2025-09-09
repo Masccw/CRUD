@@ -1,7 +1,8 @@
 #Função de remover items
 from database import cursos
 
-def remover_curso(cursos, id_curso):
+def remover_curso(id_curso):
+    global cursos
     for i, curso in enumerate(cursos):
         if curso["id"] == id_curso:
             curso_removido = cursos.pop(i)
