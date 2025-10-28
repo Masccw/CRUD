@@ -1,9 +1,9 @@
 #Arquivo principal com o menu
-from adicionar import adicionar_curso
-from pesquisar import pesquisar_curso
-from edit import atualizar_curso
-from remove import remover_curso
-from list import listar_cursos
+from adicionar import Add
+from pesquisar import Search
+from edit import Edit
+from remove import Remove
+from list import List
 
 while True:
     print(
@@ -25,19 +25,19 @@ while True:
         nome = input("Digite o nome do curso novo: ")
         descricao = input("Digite a descrição do curso novo: ")
         carga = input("Digite a carga do curso novo: ")
-        adicionar_curso(nome, descricao, carga)
+        Add.adicionar_curso(nome, descricao, carga)
     elif opcao_curso == 2:
-        pesquisar_curso()
+        Search.pesquisar_curso()
     elif opcao_curso == 3:
-        atualizar_curso()
+        Edit.atualizar_curso()
     elif opcao_curso == 4:
         try:
             id_curso = int(input("Digite o ID do curso que deseja remover: "))
-            remover_curso(id_curso)
+            Remove.remover_curso(id_curso)
         except ValueError:
             print("ID inválido! Digite apenas números.")
     elif opcao_curso == 5:
-        listar_cursos()
+        List.listar_cursos()
     elif opcao_curso == 6:
         print("Programa encerrando...")
         break
